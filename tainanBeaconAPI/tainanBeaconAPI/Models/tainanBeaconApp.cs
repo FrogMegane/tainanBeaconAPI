@@ -68,7 +68,6 @@
 
     public class App
     {
-        
         public int Id { get; set; }
         public string Name { get; set; }
         public byte[] TreasureMap { get; set;}
@@ -92,7 +91,14 @@
         public int SiteId { get; set; }
         public string Name { get; set; }
         public string Introduction { get; set; }
+        
+        //時間
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+
         public DateTime EndDate { get; set; }
         public DateTime OpenTime { get; set; }
         public DateTime CloseTime { get; set; }
@@ -142,6 +148,8 @@
         public int Id { get; set; }//Beacon Id or QR Id
         public int FloorId { get; set; }
         public Boolean IsBeacon { get; set; }
+        public string BeaconAPIId { get; set; }
+
         public string Title { get; set; }
         public string Message { get; set; }
         public float X { get; set; }
