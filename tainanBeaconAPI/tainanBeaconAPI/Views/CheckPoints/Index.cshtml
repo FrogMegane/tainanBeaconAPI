@@ -1,0 +1,70 @@
+﻿@model IEnumerable<tainanBeaconAPI.Models.CheckPoint>
+
+@{
+    ViewBag.Title = "關卡";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor.FloorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeaconAPIId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBeacon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.X)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor.FloorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeaconAPIId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBeacon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.X)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id,isBeacon=item.IsBeacon }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id, isBeacon = item.IsBeacon }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id, isBeacon = item.IsBeacon })
+        </td>
+    </tr>
+}
+
+</table>

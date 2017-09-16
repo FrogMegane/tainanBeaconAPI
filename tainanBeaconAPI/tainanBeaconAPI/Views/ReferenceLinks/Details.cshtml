@@ -1,0 +1,42 @@
+﻿@model tainanBeaconAPI.Models.ReferenceLink
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReferenceLink</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Exhibition.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exhibition.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+    </dl>
+</div>
+<p>
+    @{/*Model 變數代表本頁面的資料*/ }
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExhibitionId, link = Model.Link }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

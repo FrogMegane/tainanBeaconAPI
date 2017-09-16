@@ -4,6 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity;
     using System.Linq;
 
@@ -22,7 +23,6 @@
 
         public DbSet<Exhibition> Exhibitions { get; set; }
         public DbSet<ReferenceLink> Links { get; set; }
-
         public DbSet<Site> Sites { get; set; }
 
         public DbSet<Floor> Floors { get; set; }
@@ -70,7 +70,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public byte[] TreasureMap { get; set;}
+        public String TreasureMap { get; set;}
         public DateTime LastModified { get; set;}
 
         public virtual ICollection<Hold> Holds { get; set; }
@@ -98,22 +98,29 @@
         public DateTime StartDate { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-
         public DateTime EndDate { get; set; }
+
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
         public DateTime OpenTime { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
         public DateTime CloseTime { get; set; }
+
         public string TicketInfo { get; set; }
         public string Note { get; set; }
-        public byte[] Icon { get; set; }
-        public byte[] Photo { get; set; }
+        public string Icon { get; set; }
+        public string Photo { get; set; }
 
         public virtual ICollection<ReferenceLink> RefLinks { get; set; }//一對多
         public virtual ICollection<Hold> Holded { get; set; }//many to many
         public virtual Site Site { get; set; }
     }
     public class ReferenceLink {
+        [Key, Column(Order = 1)]
         public int ExhibitionId { get; set; }
         [DataType(DataType.Url)]
+        [Key, Column(Order = 2)]
         public string Link { get; set; }
         public string Name { get; set; }
 
@@ -138,7 +145,7 @@
         public int Id { get; set; }
         public int SiteId { get; set; }
         public string FloorName { get; set; }
-        public byte[] FLoorMap { get; set; }
+        public string FLoorMap { get; set; }
 
         public virtual Site Site { get; set; }
         public virtual ICollection<CheckPoint> CheckPoints { get; set; }

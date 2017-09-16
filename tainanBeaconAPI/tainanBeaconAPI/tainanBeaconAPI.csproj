@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -228,7 +229,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppsController.cs" />
+    <Compile Include="Controllers\CheckPointsController.cs" />
+    <Compile Include="Controllers\EditorController.cs" />
+    <Compile Include="Controllers\ExhibitionsController.cs" />
+    <Compile Include="Controllers\FloorsController.cs" />
+    <Compile Include="Controllers\HoldsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReferenceLinksController.cs" />
+    <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -240,6 +249,14 @@
     <Compile Include="Migrations\201708040706469_dateformat.cs" />
     <Compile Include="Migrations\201708040706469_dateformat.Designer.cs">
       <DependentUpon>201708040706469_dateformat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708301747273_Exhibtion_time_formatting.cs" />
+    <Compile Include="Migrations\201708301747273_Exhibtion_time_formatting.Designer.cs">
+      <DependentUpon>201708301747273_Exhibtion_time_formatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709161912177_changeBinary2Base64.cs" />
+    <Compile Include="Migrations\201709161912177_changeBinary2Base64.Designer.cs">
+      <DependentUpon>201709161912177_changeBinary2Base64.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -301,12 +318,48 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Editor\Index.cshtml" />
+    <Content Include="Views\Sites\Create.cshtml" />
+    <Content Include="Views\Sites\Delete.cshtml" />
+    <Content Include="Views\Sites\Details.cshtml" />
+    <Content Include="Views\Sites\Edit.cshtml" />
+    <Content Include="Views\Sites\Index.cshtml" />
+    <Content Include="Views\Exhibitions\Create.cshtml" />
+    <Content Include="Views\Exhibitions\Delete.cshtml" />
+    <Content Include="Views\Exhibitions\Details.cshtml" />
+    <Content Include="Views\Exhibitions\Edit.cshtml" />
+    <Content Include="Views\Exhibitions\Index.cshtml" />
+    <Content Include="Views\ReferenceLinks\Create.cshtml" />
+    <Content Include="Views\ReferenceLinks\Delete.cshtml" />
+    <Content Include="Views\ReferenceLinks\Details.cshtml" />
+    <Content Include="Views\ReferenceLinks\Edit.cshtml" />
+    <Content Include="Views\ReferenceLinks\Index.cshtml" />
+    <Content Include="Views\Apps\Create.cshtml" />
+    <Content Include="Views\Apps\Delete.cshtml" />
+    <Content Include="Views\Apps\Details.cshtml" />
+    <Content Include="Views\Apps\Edit.cshtml" />
+    <Content Include="Views\Apps\Index.cshtml" />
+    <Content Include="Views\Holds\Create.cshtml" />
+    <Content Include="Views\Holds\Delete.cshtml" />
+    <Content Include="Views\Holds\Details.cshtml" />
+    <Content Include="Views\Holds\Edit.cshtml" />
+    <Content Include="Views\Holds\Index.cshtml" />
+    <Content Include="Views\Floors\Create.cshtml" />
+    <Content Include="Views\Floors\Delete.cshtml" />
+    <Content Include="Views\Floors\Details.cshtml" />
+    <Content Include="Views\Floors\Edit.cshtml" />
+    <Content Include="Views\Floors\Index.cshtml" />
+    <Content Include="Views\CheckPoints\Create.cshtml" />
+    <Content Include="Views\CheckPoints\Delete.cshtml" />
+    <Content Include="Views\CheckPoints\Details.cshtml" />
+    <Content Include="Views\CheckPoints\Edit.cshtml" />
+    <Content Include="Views\CheckPoints\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -335,6 +388,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708040706469_dateformat.resx">
       <DependentUpon>201708040706469_dateformat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708301747273_Exhibtion_time_formatting.resx">
+      <DependentUpon>201708301747273_Exhibtion_time_formatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709161912177_changeBinary2Base64.resx">
+      <DependentUpon>201709161912177_changeBinary2Base64.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

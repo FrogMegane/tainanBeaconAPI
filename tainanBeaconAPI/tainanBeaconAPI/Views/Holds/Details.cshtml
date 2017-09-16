@@ -1,0 +1,51 @@
+﻿@model tainanBeaconAPI.Models.Hold
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hold</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.App.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.App.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exhibition.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exhibition.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

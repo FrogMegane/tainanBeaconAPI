@@ -1,7 +1,11 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+﻿@{
+    ViewBag.Title = "劍獅尋寶趣";
+    var EditorLink = @Url.Action("Index", "Editor");//編輯頁面
+}
+<div class="jumbotron">
+    <h1>劍獅尋寶趣</h1>
+    <p class="lead">還沒試過快速創建你的Beacon APP嗎? </p>
+    <p><a href="@EditorLink" class="btn btn-primary btn-lg">Try it &raquo;</a></p>
 </div>
 <div class="row">
     <div class="col-md-4">

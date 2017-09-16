@@ -1,0 +1,67 @@
+﻿@model tainanBeaconAPI.Models.CheckPoint
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CheckPoint</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor.FloorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor.FloorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeaconAPIId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeaconAPIId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id, isBeacon = Model.IsBeacon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

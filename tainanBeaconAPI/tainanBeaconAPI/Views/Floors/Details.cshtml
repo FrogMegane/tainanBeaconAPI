@@ -1,0 +1,43 @@
+﻿@model tainanBeaconAPI.Models.Floor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Floor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Site.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FLoorMap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FLoorMap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
