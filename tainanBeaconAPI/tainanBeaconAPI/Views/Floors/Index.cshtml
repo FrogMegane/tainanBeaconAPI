@@ -33,7 +33,7 @@
             @Html.DisplayFor(modelItem => item.FloorName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FLoorMap)
+            <img src="data:image;base64,@item.FLoorMap" class="imgWidth" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

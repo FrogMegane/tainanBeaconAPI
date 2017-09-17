@@ -7,7 +7,7 @@
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Floors", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -36,8 +36,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FLoorMap, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FLoorMap, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FLoorMap, "", new { @class = "text-danger" })
+                <input type="file" id="Image" name="upload" class="btn btn-info" />
             </div>
         </div>
 

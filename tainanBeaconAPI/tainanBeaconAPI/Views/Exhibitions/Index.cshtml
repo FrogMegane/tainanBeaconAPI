@@ -78,10 +78,10 @@
             @Html.DisplayFor(modelItem => item.Note)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Icon)
+            <img src="data:image;base64,@item.Icon" class="imgWidth" />
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Photo)
+            <img src="data:image;base64,@item.Photo" class="imgWidth" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

@@ -88,15 +88,15 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Icon)
+            <img src="data:image;base64,@Model.Icon" />
         </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Photo)
         </dt>
-
+            
         <dd>
-            @Html.DisplayFor(model => model.Photo)
+            <img src="data:image;base64,@Model.Photo" />
         </dd>
 
     </dl>
