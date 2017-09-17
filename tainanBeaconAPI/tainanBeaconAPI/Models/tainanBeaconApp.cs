@@ -85,7 +85,6 @@
 
         [JsonIgnore]
         public virtual App App { get; set; }
-        [JsonIgnore]
         public virtual Exhibition Exhibition { get; set; }
     }
     public class Exhibition
@@ -116,6 +115,7 @@
         public string Photo { get; set; }
 
         public virtual ICollection<ReferenceLink> RefLinks { get; set; }//一對多
+        [JsonIgnore]
         public virtual ICollection<Hold> Holded { get; set; }//many to many
         public virtual Site Site { get; set; }
     }
@@ -139,6 +139,7 @@
         public float Lat { get; set; }
         public float Long { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Exhibition> Exhibitions { get; set; }
         public virtual ICollection<Floor> Floors { get; set; }
     }
@@ -151,6 +152,7 @@
         public string FloorName { get; set; }
         public string FLoorMap { get; set; }
 
+        [JsonIgnore]
         public virtual Site Site { get; set; }
         public virtual ICollection<CheckPoint> CheckPoints { get; set; }
     }
@@ -166,6 +168,7 @@
         public float X { get; set; }
         public float Y { get; set; }
 
+        [JsonIgnore]
         public virtual Floor Floor { get; set; }
     }
 }
