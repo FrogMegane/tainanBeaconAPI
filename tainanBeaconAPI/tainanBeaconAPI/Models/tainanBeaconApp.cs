@@ -1,5 +1,6 @@
 ﻿namespace tainanBeaconAPI.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -82,7 +83,9 @@
         public float X { get; set; }
         public float Y { get; set; }
 
+        [JsonIgnore]
         public virtual App App { get; set; }
+        [JsonIgnore]
         public virtual Exhibition Exhibition { get; set; }
     }
     public class Exhibition
@@ -124,6 +127,7 @@
         public string Link { get; set; }
         public string Name { get; set; }
 
+        [JsonIgnore]
         public virtual Exhibition Exhibition { get; set; }
     }
     

@@ -481,6 +481,17 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:tainanBeaconAPI.Controllers.AppController.GetApps">
+            <summary>
+            取得全部APP
+            </summary>
+        </member>
+        <member name="M:tainanBeaconAPI.Controllers.AppController.GetApp(System.Int32)">
+            <summary>
+            取得特定ID之APP
+            </summary>
+            <param name="id">The ID of the data.</param>
+        </member>
         <member name="M:tainanBeaconAPI.Controllers.ValuesController.Get(System.Int32)">
             <summary>
             Looks up some data by ID.
